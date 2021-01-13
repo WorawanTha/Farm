@@ -124,13 +124,12 @@
             </ul>
             <div class="navbar-buttons d-flex justify-content-end">
               <!-- /.nav-collapse-->
-              {{-- <div id="search-not-mobile" class="navbar-collapse collapse"></div><a data-toggle="collapse" href="#search" class="btn navbar-btn btn-primary d-none d-lg-inline-block"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></a> --}}
-              <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block"><a href="basket.blade.php" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span>3 items in cart</span></a></div>
+              <div id="search-not-mobile" class="navbar-collapse collapse"></div><a data-toggle="collapse" href="#search" class="btn navbar-btn btn-primary d-none d-lg-inline-block"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></a>
+              <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block"><a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span>3 items in cart</span></a></div>
             </div>
           </div>
         </div>
       </nav>
-
       <div id="search" class="collapse">
         <div class="container">
           <form role="search" class="ml-auto">
@@ -144,68 +143,108 @@
         </div>
       </div>
     </header>
-
     <div id="all">
       <div id="content">
         <div class="container">
           <div class="row">
-
             <div class="col-lg-12">
               <!-- breadcrumb-->
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li aria-current="page" class="breadcrumb-item active">สมัครสมาชิก</li>
+                  <li aria-current="page" class="breadcrumb-item active">Edit Profile</li>
                 </ol>
               </nav>
             </div>
-
             <div class="col-lg-6">
-              <div class="box-register">
-                <h1>สมัครสมาชิกใหม่</h1>
-                <hr>
-                <form action="customer-orders.html" method="post">
-                  <div class="form-group">
-                    <label for="name">ชื่อ</label>
-                    <input id="name" type="text" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="Lastname">นามสกุล</label>
-                    <input id="Lastname" type="text" class="form-control">
-                  </div>
+              <div class="box-Profile">
+              <div class="container">
+    <h1>Edit Profile</h1>
+  	<hr>
+	<div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+      <div class="form-group">
+        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+        <h6>...................อัปโหลดรูปภาพ...................</h6>
+        <input id="Upload" type="file" require accept="image/*">
                   
-                  <div class="form-group">
-                    <label for="email">อีเมล</label>
-                    <input id="email" type="text" class="form-control">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="username">ชื่อผู้ใช้</label>
-                    <input id="username" type="text" class="form-control">
-                  </div>
-                  
-                  <div class="form-group">
-                    <label for="password">รหัสผ่าน</label>
-                    <input id="password" type="password" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="password">ยืนยันรหัสผ่าน</label>
-                    <input id="password" type="password" class="form-control">
-                  </div>
-                  
-                  <div class="form-group">
-                    <label for="select">ผู้ซื้อ / ผู้ขาย</label>
-                    <select class="form-control">
-                      <option value="-1">--เลือก--</option>
-                      <option data-ref="1">ผู้ซื้อ</option>
-                      <option data-ref="2">ผู้ขาย</option>
-                    </select>
-                  </div>
-
-                  <div class="text-center">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-user-md"></i> สมัครสมาชิก</button>
-                  </div>
-                </form>
+      </div>
+      </div>
+      
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        <!-- <div class="alert alert-info alert-dismissable">
+          <a class="panel-close close" data-dismiss="alert">×</a> 
+          <i class="fa fa-coffee"></i>
+          This is an <strong>.alert</strong>. Use this to show important messages to the user.
+        </div> ไว้ใส่ถ้าจำเป็น-->
+        
+        <h3>ข้อมูลส่วนตัว</h3>
+        
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-lg-3 control-label">ชื่อ</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">นามสกุล</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">ที่อยู่</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">เบอร์โทรศัพท์</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="tel" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">อีเมล</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" >
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-md-3 control-label">ชื่อผู้ใช้</label>
+            <div class="col-md-8">
+              <input class="form-control" type="text" value="janeuser">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">รหัสผ่าน</label>
+            <div class="col-md-8">
+              <input class="form-control" type="password" value="11111122333">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">ยืนยัน รหัสผ่าน</label>
+            <div class="col-md-8">
+              <input class="form-control" type="password" value="11111122333">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+              <input type="button" class="btn btn-primary" value="Save Changes">
+              <span></span>
+              <input type="reset" class="btn btn-default" value="Cancel">
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+<hr>
               </div>
             </div>
             
@@ -213,7 +252,8 @@
         </div>
       </div>
     </div>
-   <!--
+    
+    <!--
     *** FOOTER ***
     _________________________________________________________
     -->

@@ -124,13 +124,12 @@
             </ul>
             <div class="navbar-buttons d-flex justify-content-end">
               <!-- /.nav-collapse-->
-              {{-- <div id="search-not-mobile" class="navbar-collapse collapse"></div><a data-toggle="collapse" href="#search" class="btn navbar-btn btn-primary d-none d-lg-inline-block"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></a> --}}
-              <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block"><a href="basket.blade.php" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span>3 items in cart</span></a></div>
+              <div id="search-not-mobile" class="navbar-collapse collapse"></div><a data-toggle="collapse" href="#search" class="btn navbar-btn btn-primary d-none d-lg-inline-block"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></a>
+              <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block"><a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span>3 items in cart</span></a></div>
             </div>
           </div>
         </div>
       </nav>
-
       <div id="search" class="collapse">
         <div class="container">
           <form role="search" class="ml-auto">
@@ -144,66 +143,80 @@
         </div>
       </div>
     </header>
-
     <div id="all">
       <div id="content">
         <div class="container">
           <div class="row">
-
-            <div class="col-lg-12">
+          <div class="col-lg-12">
               <!-- breadcrumb-->
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li aria-current="page" class="breadcrumb-item active">สมัครสมาชิก</li>
+                  <li aria-current="page" class="breadcrumb-item active">เพิ่มข้อมูลสินค้า</li>
                 </ol>
               </nav>
-            </div>
-
+            </div>  
+ <!--
+    *** หน้าเพิ่มของ ***
+    _________________________________________________________
+    -->
             <div class="col-lg-6">
               <div class="box-register">
-                <h1>สมัครสมาชิกใหม่</h1>
+                <h1>เพิ่มข้อมูลสินค้า</h1>
+
                 <hr>
                 <form action="customer-orders.html" method="post">
-                  <div class="form-group">
-                    <label for="name">ชื่อ</label>
-                    <input id="name" type="text" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="Lastname">นามสกุล</label>
-                    <input id="Lastname" type="text" class="form-control">
-                  </div>
+
+                <!-- แก้ทีหลัง -->
+                <div class="form-group">
+        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+        <h6>...................อัปโหลดรูปภาพ...................</h6>
+        <input id="Upload" type="file" class="form-control" require accept="image/*">
                   
+      </div></hr>
+
+                 <!-- <div class="form-group">
+                    <label for="Upload">อัปโหลด</label>
+                    <input id="Upload" type="file" class="form-control" require accept="image/*">
+                    <button class="btn btn-primary" type="submit">Upload</button>
+                  </div>
+                  แก้ทีหลัง -->
+                  
+
                   <div class="form-group">
-                    <label for="email">อีเมล</label>
-                    <input id="email" type="text" class="form-control">
+                    <label for="nameProduct">ชื่อสินค้า</label>
+                    <input id="nameProduct" type="text" class="form-control">
                   </div>
 
                   <div class="form-group">
-                    <label for="username">ชื่อผู้ใช้</label>
-                    <input id="username" type="text" class="form-control">
+                    <label for="number">ขนาดสินค้า</label>
+                    <input type="text" id="number" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="Brix">ค่าความหวาน</label>
+                    <input id="Brix" type="number" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="date">วันที่</label>
+                    <input id="date" type="date" class="form-control">
                   </div>
                   
                   <div class="form-group">
-                    <label for="password">รหัสผ่าน</label>
-                    <input id="password" type="password" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="password">ยืนยันรหัสผ่าน</label>
-                    <input id="password" type="password" class="form-control">
+                    <label for="price">ราคา</label>
+                    <input id="price" type="text" class="form-control">
                   </div>
                   
                   <div class="form-group">
-                    <label for="select">ผู้ซื้อ / ผู้ขาย</label>
-                    <select class="form-control">
-                      <option value="-1">--เลือก--</option>
-                      <option data-ref="1">ผู้ซื้อ</option>
-                      <option data-ref="2">ผู้ขาย</option>
-                    </select>
+                    <label for="sell">ผลิตโดย</label>
+                    <input id="sell" type="text" class="form-control">
                   </div>
+                
 
                   <div class="text-center">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-user-md"></i> สมัครสมาชิก</button>
+                    <button type="submit" class="btn btn-primary"> ยืนยัน </button>
+                    <button type="submit" class="btn btn-primary"> ยกเลิก</button>
                   </div>
                 </form>
               </div>
@@ -213,7 +226,8 @@
         </div>
       </div>
     </div>
-   <!--
+
+    <!--
     *** FOOTER ***
     _________________________________________________________
     -->
